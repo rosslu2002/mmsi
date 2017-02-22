@@ -1,3 +1,6 @@
-//test for cret
+void testgpio(void)
+{
+	NOP
+}
 
 
