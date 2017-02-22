@@ -20,7 +20,7 @@
 ADD_MODULE += drivers
 
 all: $(ADD_MODULE)
-	echo hello build
+	echo hello build  steak
 
 include ./drivers/drivers.mk
 
