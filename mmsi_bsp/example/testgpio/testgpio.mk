@@ -17,13 +17,11 @@
 #* MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE TERMS.
 #***********************************************************************************
 
-ADD_MODULE += drivers
-ADD_MODULE += testgpio
+testgpio_filelist = $(wildcard ./example/testgpio/testgpio*.c)
+testgpio_objslist := $(testgpio_filelist:%.c=%.o)
 
-all: $(ADD_MODULE)
-	echo hello build 
+testgpio: $(testgpio_objslist)
 
-include ./drivers/drivers.mk
-include ./example/testgpio/testgpio.mk
-
+%.o: %.c
+	@echo build test ....  $<
 
